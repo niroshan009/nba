@@ -1,0 +1,17 @@
+<div>
+  <h2>{{ pageTitle }}</h2>
+  <table class="table" *ngIf="players && players.length">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>height</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of players">
+        <td>{{ player.first_name }}</td>
+        <td>{{ player.height_feet }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
