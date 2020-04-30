@@ -1,21 +1,25 @@
 <div>
-  <h2>{{ pageTitle }}</h2>
-  <table class="table" *ngIf="players && players.length">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Height</th>
-        <th>Position</th>
-        <th>Team</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let player of players">
-        <td>{{ player.first_name }} {{ player.last_name }}</td>
-        <td>{{ player.height_feet }}' {{ player.height_inches }}"</td>
-        <td>{{ player.position }}</td>
-        <td>{{ player.team.full_name }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="titleMargin">
+    <h2>{{ pageTitle }}</h2>
+  </div>
+  <div class="sideMargin">
+    <table class="table" *ngIf="players && players.length">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Height</th>
+          <th>Position</th>
+          <th>Team</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let player of players">
+          <td>{{ player.first_name }} {{ player.last_name }}</td>
+          <td>{{ player.height_feet }}' {{ player.height_inches }}"</td>
+          <td>{{ player.position }}</td>
+          <td>{{ player.team.full_name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
