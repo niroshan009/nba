@@ -1,4 +1,4 @@
-<div class="center">
+<div class="center" *ngIf="player">
   <h2>{{ pageTitile }}</h2>
   <p>Full Name: {{ player.first_name }} {{ player.last_name }}</p>
   <p>Height: {{ player.height_feet }}' {{ player.height_inches }}"</p>
