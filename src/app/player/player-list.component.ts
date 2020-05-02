@@ -13,10 +13,6 @@ export class PlayerListComponent implements OnInit {
   constructor(private playerSrvice: PlayerService) {}
 
   ngOnInit(): void {
-    this.playerSrvice.getPlayers().subscribe((data) => {
-      console.log(data['data']);
-      this.players = data['data'];
-    });
-    console.log(this.players);
+    this.playerSrvice.getPlayers().subscribe((data) => (this.players = data));
   }
 }
